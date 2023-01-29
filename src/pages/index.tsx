@@ -13,6 +13,7 @@ import { DateComponent } from '@/components/DateComponent';
 import { ColoredIcon } from '@/components/ColoredIcon';
 import { getSortedPostsData } from '../../lib/posts';
 import { Miniature } from '@/components/Miniature';
+import { Badge } from '@mantine/core';
 
 export default function Home({ allPostsData }: any) {
   return (
@@ -76,13 +77,16 @@ export default function Home({ allPostsData }: any) {
           {allPostsData.map(({ id, date, title, illustration }: any) => (
             <li key={id}>
               <Link href={`/posts/${id}`}>
-                <DateComponent dateString={date} />
+                <Badge>
+                  <DateComponent dateString={date} />
+                </Badge>
+                <div style={{ height: `.25rem` }} />
                 <Miniature
                   img={`https://aerg.infura-ipfs.io/ipfs/${illustration}`}
                   title={title}
                   badge={`badge`}
                   description={`Lorem ipsum`}
-                  btn={`Button`}
+                  btn={`Read the Story`}
                 />
               </Link>
             </li>
