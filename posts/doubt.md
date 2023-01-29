@@ -1,7 +1,7 @@
 ---
 title: Doubt
 date: January 29, 2023 5:12 PM
-illustration: "public/uploads/90249076_doubt__a_portal_to_a_world_of_uncertainty__an_adventure_awaits__and_in_the_shadows_lies_fate__concep.png"
+illustration: QmbWK9fMyawHvYAfN4jdkAQyTbeSjwGqErLizuMGR8eRAg
 ---
 Doubt.\
 \

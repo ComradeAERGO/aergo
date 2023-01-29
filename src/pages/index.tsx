@@ -72,27 +72,20 @@ export default function Home({ allPostsData }: any) {
       </main>
 
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
-        <h2 className={styles.headingLg}>Blog</h2>
         <ul className={styles.list}>
           {allPostsData.map(({ id, date, title, illustration }: any) => (
-            <>
-              <li className={styles.listItem} key={id}>
-                <Link href={`/posts/${id}`}>{title}</Link>
-                <br />
-                <small className={styles.lightText}>
-                  <DateComponent dateString={date} />
-                </small>
-              </li>
-              <li>
+            <li key={id}>
+              <Link href={`/posts/${id}`}>
+                <DateComponent dateString={date} />
                 <Miniature
-                  img={illustration}
+                  img={`https://aerg.infura-ipfs.io/ipfs/${illustration}`}
                   title={title}
                   badge={`badge`}
                   description={`Lorem ipsum`}
                   btn={`Button`}
                 />
-              </li>
-            </>
+              </Link>
+            </li>
           ))}
         </ul>
       </section>
