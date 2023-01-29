@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { DateComponent } from '@/components/DateComponent';
 import { ColoredIcon } from '@/components/ColoredIcon';
 import { getSortedPostsData } from '../../lib/posts';
+import { Miniature } from '@/components/Miniature';
 
 export default function Home({ allPostsData }: any) {
   return (
@@ -73,14 +74,25 @@ export default function Home({ allPostsData }: any) {
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
         <h2 className={styles.headingLg}>Blog</h2>
         <ul className={styles.list}>
-          {allPostsData.map(({ id, date, title }: any) => (
-            <li className={styles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={styles.lightText}>
-                <DateComponent dateString={date} />
-              </small>
-            </li>
+          {allPostsData.map(({ id, date, title, illustration }: any) => (
+            <>
+              <li className={styles.listItem} key={id}>
+                <Link href={`/posts/${id}`}>{title}</Link>
+                <br />
+                <small className={styles.lightText}>
+                  <DateComponent dateString={date} />
+                </small>
+              </li>
+              <li>
+                <Miniature
+                  img={illustration}
+                  title={title}
+                  badge={`badge`}
+                  description={`Lorem ipsum`}
+                  btn={`Button`}
+                />
+              </li>
+            </>
           ))}
         </ul>
       </section>
