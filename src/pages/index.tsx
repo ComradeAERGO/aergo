@@ -9,7 +9,7 @@ import {
 import { RedditIconLogo } from '@/assets/reddit';
 import { FlexSpacer } from '@/components/FlexSpacer';
 import Link from 'next/link';
-import Date from '@/components/Date';
+import { DateComponent } from '@/components/DateComponent';
 import { ColoredIcon } from '@/components/ColoredIcon';
 import { getSortedPostsData } from '../../lib/posts';
 
@@ -78,7 +78,7 @@ export default function Home({ allPostsData }: any) {
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={styles.lightText}>
-                <Date dateString={date} />
+                <DateComponent dateString={date} />
               </small>
             </li>
           ))}
