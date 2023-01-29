@@ -1,9 +1,26 @@
+@import '@radix-ui/colors/blackA.css';
+@import '@radix-ui/colors/violet.css';
+@import '@radix-ui/colors/purple.css';
+@import '@radix-ui/colors/indigo.css';
+
 html,
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Fira Sans', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -21,6 +38,43 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background-image: var(--blackA1);
   }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: black;
+    background: var(--whiteA1);
+  }
+}
+
+/* link animation */
+
+a {
+  position: relative;
+  overflow: hidden;
+}
+
+.multiviolet::before {
+  position: absolute;
+  content: attr(data-content); /* Prints the value of the attribute */
+  top: -2.5px;
+  left: 0;
+  color: deeppink;
+  overflow: hidden;
+  transition: width 50ms ease-in;
+}
+
+a::before {
+  /* Same as before */
+  width: 0;
+  white-space: nowrap;
+}
+
+a:hover::before {
+  width: 100%;
 }

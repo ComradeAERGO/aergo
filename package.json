@@ -26,9 +26,16 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "11.10.5",
+    "@mantine/core": "5.10.2",
+    "@mantine/hooks": "5.10.2",
+    "@radix-ui/colors": "0.1.8",
+    "@radix-ui/react-avatar": "1.0.1",
+    "@radix-ui/react-icons": "1.1.1",
     "next": "13.1.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "styled-components": "5.3.6"
   },
   "devDependencies": {
     "@commitlint/cli": "17.4.2",

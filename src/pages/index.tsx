@@ -1,72 +1,78 @@
-import Head from 'next/head';
-import Image from 'next/image';
-
 import styles from '@/styles/Home.module.css';
+import { HeadComponent } from '@/components/Head';
+import AvatarComponent from '@/components/Avatar';
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from '@radix-ui/react-icons';
+import { RedditIconLogo } from '@/assets/reddit';
+import { FlexSpacer } from '@/components/FlexSpacer';
+import { ThemeIcon } from '@mantine/core';
+import { ColoredIcon } from '@/components/ColoredIcon';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>TypeScript starter for Next.js</title>
-        <meta
-          name="description"
-          content="TypeScript starter for Next.js that includes all you need to build amazing apps"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadComponent />
+
+      <FlexSpacer />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <AvatarComponent />
+
+        <h1 className={`${styles.title} ${styles.pretitle}`}>
+          <a className="focus-in-contract" href="https://bento.me/aergo">
+            AERGO
+          </a>
         </h1>
 
+        <h1 className={styles.title}>Anthony Emilio Robert Goussot</h1>
+
         <p className={styles.description}>
-          Get started by editing{` `}
-          <code className={styles.code}>src/pages/index.tsx</code>
+          French Software Engineer, currently working @{` `}
+          <a
+            className="multiviolet"
+            href="https://multis.co"
+            data-content="Multis"
+          >
+            Multis
+          </a>
         </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=typescript-nextjs-starter"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className={styles.logos}>
+          <ColoredIcon>
+            <a href="https://www.linkedin.com/in/anthonygoussot/">
+              <LinkedInLogoIcon />
+            </a>
+          </ColoredIcon>
+          <ColoredIcon>
+            <a href="https://github.com/ComradeAERGO">
+              <GitHubLogoIcon />
+            </a>
+          </ColoredIcon>
+          <ColoredIcon>
+            <a href="https://twitter.com/ComradeAERGO">
+              <TwitterLogoIcon />
+            </a>
+          </ColoredIcon>
+          <ColoredIcon>
+            <a href="https://www.reddit.com/user/0xAERG">
+              <RedditIconLogo />
+            </a>
+          </ColoredIcon>
         </div>
+
+        <p className={styles.description}>
+          Passionated about Science, Web3, Engineering and Philosophy{` `}
+        </p>
       </main>
 
+      <FlexSpacer />
+
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=typescript-nextjs-starter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{` `}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        © 2023 - Anthony Emile Robert Goussot - Crafted by hand with ❤️ in Paris
+        12ème Arrondissement{` `}
       </footer>
     </div>
   );
