@@ -20,6 +20,7 @@ export default function Home({ allPostsData }: any) {
     <div className={styles.container}>
       <HeadComponent />
 
+      <div style={{ height: `20vh` }}></div>
       <FlexSpacer />
 
       <main className={styles.main}>
@@ -75,7 +76,7 @@ export default function Home({ allPostsData }: any) {
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
         <ul className={styles.list}>
           {allPostsData.map(({ id, date, title, illustration }: any) => (
-            <li key={id}>
+            <li key={id} className={styles.pulsate}>
               <Link href={`/posts/${id}`}>
                 <Badge>
                   <DateComponent dateString={date} />
@@ -97,8 +98,8 @@ export default function Home({ allPostsData }: any) {
       <FlexSpacer />
 
       <footer className={styles.footer}>
-        © 2023 - Anthony Emile Robert Goussot - Crafted by hand with ❤️ in Paris
-        12ème Arrondissement{` `}
+        © 2023 - Anthony Emile Robert Goussot - Crafted by hand with ❤️&nbsp; in
+        Paris 12ème Arrondissement{` `}
       </footer>
     </div>
   );
