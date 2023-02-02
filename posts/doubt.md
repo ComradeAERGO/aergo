@@ -1,6 +1,6 @@
 ---
-title: Doubt
-date: January 29, 2023 5:12 PM
+title: "Doubt"
+date: "January 29, 2023 5:12 PM"
 illustration: QmbWK9fMyawHvYAfN4jdkAQyTbeSjwGqErLizuMGR8eRAg
 ---
 Doubt.\
