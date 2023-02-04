@@ -1,3 +1,5 @@
+import styles from '@/styles/Layout.module.css';
+
 export default function Layout({ children }: any) {
-  return <div>{children}</div>;
+  return <section className={styles.layout}>{children}</section>;
 }

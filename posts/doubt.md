@@ -2,6 +2,7 @@
 title: "Doubt"
 date: "January 29, 2023 5:12 PM"
 illustration: QmbWK9fMyawHvYAfN4jdkAQyTbeSjwGqErLizuMGR8eRAg
+description: "It's something we've all experienced at some point"
 ---
 Doubt.\
 \

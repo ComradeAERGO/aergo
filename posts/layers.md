@@ -2,6 +2,7 @@
 title: "It's easy as 1 2 3"
 date: "2020-01-12"
 illustration: QmRvWAcspf8iJswEAgpLBgrVPCj5dDrfKBepwhDpSLTHTy
+description: "When it comes to blockchain technology, you may have heard of L0s, L1s, and L2s, but what do they all mean?"
 ---
 
 🚦When it comes to blockchain technology, you may have heard of L0s, L1s, and L2s, but what do they all mean?

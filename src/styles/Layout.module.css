@@ -1,0 +1,8 @@
+.layout {
+  display: flex;
+  justify-content: center;
+}
+
+.layout > article {
+  width: 42rem
+}

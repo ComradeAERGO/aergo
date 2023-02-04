@@ -21,6 +21,7 @@ export default function Home({ allPostsData }: any) {
       <HeadComponent />
 
       <div style={{ height: `20vh` }}></div>
+
       <FlexSpacer />
 
       <main className={styles.main}>
@@ -34,7 +35,7 @@ export default function Home({ allPostsData }: any) {
 
         <h1 className={styles.title}>Anthony Emilio Robert Goussot</h1>
 
-        <p className={styles.description}>
+        <h5 className={styles.description}>
           French Software Engineer, currently working @{` `}
           <Link
             className="multiviolet"
@@ -43,7 +44,11 @@ export default function Home({ allPostsData }: any) {
           >
             Multis
           </Link>
-        </p>
+        </h5>
+
+        {/*<p className={styles.description}>
+          Programming, Web3, Engineering and Philosophy{` `}
+        </p>*/}
 
         <div className={styles.logos}>
           <ColoredIcon>
@@ -67,31 +72,29 @@ export default function Home({ allPostsData }: any) {
             </Link>
           </ColoredIcon>
         </div>
-
-        <p className={styles.description}>
-          Passionated about Science, Web3, Engineering and Philosophy{` `}
-        </p>
       </main>
 
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
         <ul className={styles.list}>
-          {allPostsData.map(({ id, date, title, illustration }: any) => (
-            <li key={id} className={styles.pulsate}>
-              <Link href={`/posts/${id}`}>
-                <Badge>
-                  <DateComponent dateString={date} />
-                </Badge>
-                <div style={{ height: `.25rem` }} />
-                <Miniature
-                  img={`https://aerg.infura-ipfs.io/ipfs/${illustration}`}
-                  title={title}
-                  badge={`badge`}
-                  description={`Lorem ipsum`}
-                  btn={`Read the Story`}
-                />
-              </Link>
-            </li>
-          ))}
+          {allPostsData.map(
+            ({ id, date, title, illustration, description }: any) => (
+              <li key={id} className={styles.pulsate}>
+                <Link href={`/posts/${id}`}>
+                  <Badge>
+                    <DateComponent dateString={date} />
+                  </Badge>
+                  <div style={{ height: `.25rem` }} />
+                  <Miniature
+                    img={`https://aerg.infura-ipfs.io/ipfs/${illustration}`}
+                    title={title}
+                    badge={`badge`}
+                    description={description}
+                    btn={`Read the Story`}
+                  />
+                </Link>
+              </li>
+            ),
+          )}
         </ul>
       </section>
 
